@@ -3,37 +3,126 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    background-color: aliceblue;
 }
 
 
 body {
     display: grid;
     justify-items: center;
-    background-color: aliceblue;
+    align-items: flex-start;
+    background-color: rgb(65, 62, 62);
+    background-image: url('./Pizza-Slice.png');
+    background-size: 75px;
+    min-height: 100vh;
+}
+
+
+#nav-bar {
+    background-color: transparent;
+}
+
+button {
+    padding: 12px 36px 12px 36px;
+    margin: 36px 18px 36px 18px;
+    border-radius: 8px;
+    background-color: rgb(251, 134, 134);
+}
+
+button:hover {
+    background-color: rgb(246, 1, 1);
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#active {
+    background-color: rgb(246, 1, 1);
 }
 
 #content {
     display: grid;
-    width: 50vw;
+    gap: 24px;
+    width: 800px;
+    min-height: 90vh;
+    padding-bottom: 36px;
     justify-items: center;
     background-color: gray;
+    border-radius: 8px;
 }
 
+h1 {
+    padding: 16px;
+    padding-bottom: 0px;
+    font-size: 54px;
+}
+
+
+/* Home */
 .main-img {
-    width: 50vw;
+    padding: 16px;
+    width: 800px;
 }
 
+h2 {
+    padding-left: 16px;
+}
 
-
-
-
-
-
+p {
+    padding: 16px;
+}
 
 
 /* Menu */
+.menu-item {
+    display: grid;
+    align-items: center;
+    width: 650px;
+    height: 200px;
+    padding: 24px;
+    background-color: rgb(246, 1, 1);
+    border: 1px solid #000000;
+    border-radius: 8px;
+    grid: 1fr 1fr / 2fr 1fr;
+}
 
+.menu-item .name {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.menu-item p {
+    grid-area: 2 / 1 / 3 / 2;
+    font-size: 18px;
+    padding: 0px;
+}
+
+.menu-item .price {
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: flex-end;
+}
 .menu-item img {
-    width: 100px;
+    width: 150px;
+    justify-self: flex-end;
+}
+
+/* Contact */
+
+.contact-info {
+    display: grid;
+    grid: 1fr 1fr .5fr / 1fr 1fr;
+    padding: 12px;
+    width: 650px;
+    height: 400px;
+    background-color: red;
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.contact-info img {
+    grid-area: 1 / 2 / 4 / 3;
+    width: 300px;
+    border: 2px solid black;
+    align-self: center;
 }

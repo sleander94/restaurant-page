@@ -8,24 +8,18 @@ export default function contact() {
     content.appendChild(header);
 
     const contactInfo = document.createElement('div');
-    contactInfo.classList.toggle('contact-container');
+    contactInfo.classList.toggle('contact-info');
 
-    const phoneLabel = document.createElement('h3');
-    phoneLabel.classList.toggle('contact-label');
-    phoneLabel.textContent = 'Phone:'
-    contactInfo.appendChild(phoneLabel);
+    const title = document.createElement('h3');
+    title.innerText = 'General Manager: George "Pal" Costanza';
+    contactInfo.appendChild(title);
 
-    const phoneNumber = document.createElement('p');
-    phoneNumber.innerText = '(555)555-5555';
+    const phoneNumber = document.createElement('h4');
+    phoneNumber.innerText = 'Phone: (555)555-5555';
     contactInfo.appendChild(phoneNumber);
 
-    const emailLabel = document.createElement('h3');
-    emailLabel.classList.toggle('contact-label');
-    emailLabel.textContent = 'Email:';
-    contactInfo.appendChild(emailLabel);
-
-    const emailAddress = document.createElement('p');
-    emailAddress.innerText = 'paltheman@notFake.com';
+    const emailAddress = document.createElement('h4');
+    emailAddress.innerText = 'Email: paltheman@notFake.com';
     contactInfo.appendChild(emailAddress);
 
     const contactImg = document.createElement('img');
