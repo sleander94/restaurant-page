@@ -1,7 +1,7 @@
 import './style.css';
 import home from './home.js';
 import menu from './menu.js';
-
+import contact from './contact.js';
 
 const page = (() => {
     // Page container constants
@@ -29,6 +29,16 @@ const page = (() => {
         menu();
     });
     navBar.appendChild(menuButton);
+
+    // Contact button
+    const contactButton = document.createElement('button');
+    contactButton.type = 'button';
+    contactButton.textContent = 'Contact';
+    contactButton.addEventListener('click', () => {
+        content.innerHTML = '';
+        contact();
+    });
+    navBar.appendChild(contactButton);
 
     // Add content to page
     document.body.appendChild(navBar);
