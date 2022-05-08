@@ -13,9 +13,13 @@ const page = (() => {
     // Home button
     const homeButton = document.createElement('button');
     homeButton.type = 'button';
+    homeButton.id = 'active';
     homeButton.textContent = 'Home';
     homeButton.addEventListener('click', () => {
         content.innerHTML = '';
+        const activeTab = document.getElementById('active');
+        activeTab.id = '';
+        homeButton.id = 'active';
         home();
     });
     navBar.appendChild(homeButton);
@@ -26,6 +30,9 @@ const page = (() => {
     menuButton.textContent = 'Menu';
     menuButton.addEventListener('click', () => {
         content.innerHTML = '';
+        const activeTab = document.getElementById('active');
+        activeTab.id = '';
+        menuButton.id = 'active';
         menu();
     });
     navBar.appendChild(menuButton);
@@ -36,6 +43,9 @@ const page = (() => {
     contactButton.textContent = 'Contact';
     contactButton.addEventListener('click', () => {
         content.innerHTML = '';
+        const activeTab = document.getElementById('active');
+        activeTab.id = '';
+        contactButton.id = 'active';
         contact();
     });
     navBar.appendChild(contactButton);
@@ -45,4 +55,4 @@ const page = (() => {
     document.body.appendChild(content);
 })();
 
-menu();
+home();
